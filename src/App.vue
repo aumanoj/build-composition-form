@@ -9,5 +9,4 @@ import FormControls from './components/FormControls.vue'
   </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
