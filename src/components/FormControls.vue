@@ -58,7 +58,7 @@ export default {
         <label for="country">Country:</label>
         <select id="country" v-model="formData.country">
           <option value="usa">USA</option>
-          <option value="india">India</option>
+          <option value="india">INDIA</option>
           <option value="uk">UK</option>
         </select>
         <span class="error" v-if="errors.country && !formData.country">{{ errors.country }}</span>
