@@ -1,6 +1,10 @@
 <script>
 import { ref } from 'vue'
+import FormData from './FormDetails.vue'
 export default {
+  components: {
+    FormData
+  },
   setup() {
     // Form data Object
     const formData = ref({
@@ -44,7 +48,7 @@ export default {
 </script>
 
 <template>
-  <div class="center-box">
+  <div class="center-box" v-if="!submitted">
     <h1>Composition Form</h1>
     <form @submit.prevent="submitForm">
       <!-- Name Field -->
@@ -77,6 +81,9 @@ export default {
       <!-- Submit button -->
       <button class="button" type="submit">Submit</button>
     </form>
+  </div>
+  <div class="center-box" v-if="submitted">
+    <FormData :formData="formData" />
   </div>
 </template>
 
