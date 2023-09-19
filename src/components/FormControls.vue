@@ -31,7 +31,7 @@ export default {
       errors.value = {}
       // Form is valid; proceed with submission
       submitted.value = true
-      alert('From submitted successfully!')
+      alert('Form submitted successfully!')
     }
     return {
       formData,
