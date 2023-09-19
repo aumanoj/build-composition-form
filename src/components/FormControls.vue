@@ -49,13 +49,13 @@ export default {
     <form @submit.prevent="submitForm">
       <!-- Name Field -->
       <div class="form-group">
-        <label for="name">Name:</label>
+        <label for="name">Name:*</label>
         <input type="text" id="name" v-model="formData.name" />
         <span class="error" v-if="errors.name && !formData.name">{{ errors.name }}</span>
       </div>
       <!-- Country Field -->
       <div class="form-group">
-        <label for="country">Country:</label>
+        <label for="country">Country:*</label>
         <select id="country" v-model="formData.country">
           <option value="usa">USA</option>
           <option value="india">INDIA</option>
@@ -65,7 +65,7 @@ export default {
       </div>
       <!-- Message Field -->
       <div class="form-group">
-        <label for="messaage">Message:</label>
+        <label for="messaage">Message:*</label>
         <textarea rows="4" cols="50" id="message" v-model="formData.message"></textarea>
         <div class="error" v-if="errors.message">{{ errors.message }}</div>
       </div>
